@@ -1,0 +1,96 @@
+REGISTRO: COUNTRY (API https://restcountries.com)
+
+name: Object
+  common: String
+    - Nome comum do país
+  official: String
+    - Nome oficial do país
+  nativeName: Map<String, Object>
+    - Nomes no idioma nativo
+    <languageCode>: Object
+      common: String
+        - Nome comum no idioma nativo
+      official: String
+        - Nome oficial no idioma nativo
+
+tld: List<String>
+  - Lista de domínios de topo do país (ex: .ad)
+
+cca2: String
+  - Código ISO 3166-1 Alpha-2
+
+cca3: String
+  - Código ISO 3166-1 Alpha-3
+
+ccn3: String
+  - Código ISO numérico do país
+
+cioc: String
+  - Código do Comitê Olímpico Internacional
+
+independent: Boolean
+  - Indica se o país é independente
+
+status: String
+  - Status do país no padrão ISO
+
+unMember: Boolean
+  - Indica se é membro da ONU
+
+currencies: Map<String, Object>
+  - Moedas do país
+  <currencyCode>: Object
+    name: String
+      - Nome da moeda
+    symbol: String
+      - Símbolo da moeda
+
+idd: Object
+  - Informações de discagem internacional
+  root: String
+    - Código telefônico principal
+  suffixes: List<String>
+    - Sufixos telefônicos
+
+capital: List<String>
+  - Capitais do país
+
+altSpellings: List<String>
+  - Outras grafias oficiais ou populares do nome
+
+region: String
+  - Região continental (ex: Europe)
+
+subregion: String
+  - Sub-região geográfica
+
+languages: Map<String, String>
+  - Idiomas oficiais (código → nome)
+
+latlng: List<Double>
+  - Latitude e longitude
+
+landlocked: Boolean
+  - Indica se o país não possui saída para o mar
+
+borders: List<String>
+  - Países que fazem fronteira (códigos ISO)
+
+area: Double
+  - Área territorial em km²
+
+demonyms: Map<String, Object>
+  - Gentílico por idioma
+  <language>: Object
+    f: String
+      - Forma feminina
+    m: String
+      - Forma masculina
+
+translations: Map<String, Object>
+  - Traduções do nome do país
+  <language>: Object
+    official: String
+      - Nome oficial traduzido
+    common: String
+      - Nome comum traduzido
