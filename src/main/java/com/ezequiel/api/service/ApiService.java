@@ -1,6 +1,6 @@
 package com.ezequiel.api.service;
 
-import com.ezequiel.api.dto.EnderecoDto;
+import com.ezequiel.api.dto.EstadosDto;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class ApiService {
 
-    public List<EnderecoDto> getEndereco(){
+    public List<EstadosDto> getEndereco(){
         try{
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -25,7 +25,7 @@ public class ApiService {
 
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(response.body(),
-                    new TypeReference<List<EnderecoDto>>() {
+                    new TypeReference<List<EstadosDto>>() {
             });
 
         }catch (Exception e) {
