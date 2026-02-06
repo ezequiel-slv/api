@@ -1,16 +1,8 @@
 package com.ezequiel.api.dto;
 
-public class NomeNativoDto {
-    private String common;
+public class TraducaoDto {
     private String official;
-
-    public String getCommon() {
-        return common;
-    }
-
-    public void setCommon(String common) {
-        this.common = common;
-    }
+    private String common;
 
     public String getOfficial() {
         return official;
@@ -18,5 +10,13 @@ public class NomeNativoDto {
 
     public void setOfficial(String official) {
         this.official = official;
+    }
+
+    public String getCommon() {
+        return common;
+    }
+
+    public void setCommon(String common) {
+        this.common = common;
     }
 }
