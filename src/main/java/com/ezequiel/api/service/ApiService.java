@@ -18,10 +18,18 @@ public class ApiService {
         try{
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://restcountries.com/v3.1/independent?status=true")).build();
+                    .uri(URI.create("https://restcountries.com/v3.1/independent?status=true")).
+                    header("Accept", "application/json").
+                    header("User-Agent", "Java HttpCliente").GET().build();
 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
+            if (response.statusCode() != 200) {
+                throw new RuntimeException(
+                        "Erro ao consumir API. Status: " + response.statusCode() +
+                                " | Body: " + response.body()
+                );
+            }
 
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(response.body(),
