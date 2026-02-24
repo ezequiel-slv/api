@@ -22,7 +22,7 @@ public class EstadosDto {
     @JsonProperty("demonyms")
     private Map<String, GentilicoDto> gentilico;
     @JsonProperty("idd")
-    private Map<String, IddDto> idd;
+    private IddDto idd;
     @JsonProperty("translations")
     private Map<String, TraducaoDto> traducao;
     private List<String> capital;
@@ -195,11 +195,11 @@ public class EstadosDto {
         this.gentilico = gentilico;
     }
 
-    public Map<String, IddDto> getIdd() {
+    public IddDto getIdd() {
         return idd;
     }
 
-    public void setIdd(Map<String, IddDto> idd) {
+    public void setIdd(IddDto idd) {
         this.idd = idd;
     }
 
